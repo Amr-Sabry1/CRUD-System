@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container-lg my-4">
+
+        <div class="mb-3 w-75 mx-auto">
+            <h5 class="mb-2 mx-auto text-center w-50 py-3 rounded-4">&#8595; PRODUCT <span class="text-info">MANGMENT</span> SYSTEM &#8595;</h5>
+
+            <div class="form">
+                <div class="row">
+                    <div class="col-lg-6 form-group pe-3 mb-3">
+                        <label for="productName"> Product Name :</label>
+
+                        <input type="text" id="productName" class="form-control mt-2">
+                        <p class="bg-danger bg-opacity-25 text-center rounded-3 mt-1 w-75 mx-auto text-danger fw-semibold d-none " id="warn">Please Inter Product</p>
+                    </div>
+
+                    <div class="col-lg-6 form-group mb-3">
+                        <label for="productPrice"> Product price :</label>
+                        <input type="number" id="productPrice" class="form-control mt-2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-lg-6 pe-3 mb-3">
+                        <label for="productCat"> Product Categery :</label>
+                        <input type="text" id="productCat" class="form-control mt-2">
+                    </div>
+                    <div class="form-group col-lg-6 mb-3">
+                        <label for="productDesc"> Product Description :</label>
+                        <input type="text" id="productDesc" class="form-control mt-2">
+                    </div>
+                </div>
+                <div class="text-center ">
+                    <button class="addBtn" id="addBtn" onclick="addProduct()">Add Product</button>
+                    <button class="updateBtn d-none " id="updateBtn" onclick="update()">Update</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="mt-4 w-75 mx-auto">
+            <h5 class="mb-2 mx-auto text-center w-50 p-2 rounded-4 ">&#8595; <span class="text-info">PRO</span>DUCT <span class="text-info">LI</span>ST &#8595;</h5>
+            <div class="form">
+                <div class="mb-3 w-75 mx-auto ">
+                    <label for="">Search :</label>
+                    <input type="text " oninput="search(this.value)" class="form-control mt-1">
+                </div>
+                <div class="listtable">
+                    <table class="table text-center ">
+                        <thead class="bg-info bg-opacity-75 text-white">
+                            <th class="bg-black">n</th>
+                            <th>ProductName</th>
+                            <th>ProductPrice</th>
+                            <th>ProductCat</th>
+                            <th>ProductDesc</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </thead>
+                        <tbody id="tableData">
+
+                        </tbody>
+
+                    </table>
+                </div>
+                <p id="noData" class="fs-5 w-50 mx-auto bg-danger bg-opacity-25 text-danger fw-semibold text-center rounded-5">
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js ">
+    </script>
+</body>
+
+</html>
