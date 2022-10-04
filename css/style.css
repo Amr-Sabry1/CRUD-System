@@ -7,6 +7,22 @@ body {
     box-sizing: border-box;
 }
 
+.container {
+    width: 70% !important;
+}
+
+@media screen and (max-width:600px) {
+    .container {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .container {
+        width: 100% !important;
+    }
+}
+
 h5 {
     border: 5px solid rgb(74 215 244);
     background-color: rgba(53, 53, 53, 0.532);
