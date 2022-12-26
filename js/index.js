@@ -88,7 +88,7 @@ function search(searchKey) {
 
 
 function getProductData(index) {
-
+    localStorage.setItem("index", index)
     productName.value = productList[index].name
     productPrice.value = productList[index].price
     productCat.value = productList[index].cat
@@ -98,14 +98,15 @@ function getProductData(index) {
 
 }
 
-function update(index) {
+function update() {
+    let x = localStorage.getItem("index")
     if (productName.value == "") {
         document.getElementById("warn").classList.replace("d-none", "d-block")
     } else {
-        productList[0].name = productName.value,
-            productList[0].price = productPrice.value,
-            productList[0].cat = productCat.value,
-            productList[0].desc = productDesc.value
+        productList[x].name = productName.value,
+            productList[x].price = productPrice.value,
+            productList[x].cat = productCat.value,
+            productList[x].desc = productDesc.value
         displayProduct(productList)
         clearForm()
         document.getElementById("warn").classList.replace("d-block", "d-none")
